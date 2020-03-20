@@ -1,0 +1,68 @@
+{
+  "env": {
+    "browser": true
+  },
+  "extends": [
+    "react-app",
+    "airbnb-base",
+    "prettier",
+    "eslint:recommended"
+  ],
+  "plugins": ["prettier"],
+  "rules": {
+    "prettier/prettier": ["warn"],
+    "func-names": ["off"],
+    "no-param-reassign": ["off"],
+    "radix": ["error", "as-needed"],
+    "consistent-return": "off",
+    "no-useless-escape": "off",
+    "no-use-before-define": ["warn", {
+      "functions": false
+    }],
+    "object-curly-spacing": ["warn", "always"],
+    "max-len": "off",
+    "no-plusplus": "off",
+    "global-require": "off",
+    "indent": ["warn", 2, {
+      "SwitchCase": 1
+    }],
+    "class-methods-use-this": "off",
+    "no-unused-vars": "warn",
+    "no-console": "warn",
+    "import/no-extraneous-dependencies": "off",
+    "keyword-spacing": ["warn", {
+      "before": true,
+      "after": true
+    }],
+    "space-infix-ops": "warn",
+    "no-template-curly-in-string": "off",
+    "no-else-return": "off",
+    "import/prefer-default-export": "off",
+    "jsx-a11y/anchor-is-valid": "off",
+    "import/no-unresolved": ["on"],
+    "react/react-in-jsx-scope": "off",
+    "import/newline-after-import": "warn"
+  },
+  "parser": "babel-eslint",
+  "parserOptions": {
+    "sourceType": "module",
+    "ecmaFeatures": {
+      "jsx": true,
+      "modules": true
+    }
+  },
+  "settings": {
+    "react": {
+      "version": "detect"
+    }
+  },
+  "overrides": [{
+    "files": ["*.spec.js"],
+    "rules": {
+      "no-return-assign": "off",
+      "no-unused-expressions": "off",
+      "no-underscore-dangle": "off",
+      "prettier/prettier": ["off"]
+    }
+  }]
+}
