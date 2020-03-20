@@ -1,10 +1,10 @@
 import React from 'react';
-import { LoginForm } from '../components';
+import { Layout, LoginForm } from '../components';
 
 const LoginPage = () => (
-  <div>
+  <Layout>
     <LoginForm />
-  </div>
+  </Layout>
 );
 
 export default LoginPage;
