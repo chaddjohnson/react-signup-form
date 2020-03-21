@@ -1,16 +1,38 @@
 import React from 'react';
 import PropTypes from 'prop-types';
+import { css } from '@emotion/core';
 import styled from '@emotion/styled';
 
-const Button = ({ className, children, onClick }) => (
+const colorStyles = props => {
+  let color = '';
+  let rules = {};
+
+  if (props.primary) {
+    color = props.theme.colors.background.default;
+    rules = props.theme.colors.buttons.primary;
+  } else if (props.default) {
+    color = props.theme.colors.text.primary;
+    rules = props.theme.colors.buttons.default;
+  }
+
+  return css`
+    color: ${color};
+    background-color: ${rules.default};
+    &:hover {
+      background-color: ${rules.hover};
+    }
+    &:active {
+      background-color: ${rules.active};
+    }
+  `;
+};
+
+const Button = styled(({ className, children, onClick }) => (
   <button className={className} onClick={onClick}>
     {children}
   </button>
-);
-
-const StyledButton = styled(Button)`
-  background-color: ${props => props.theme.colors.buttons.active};
-  color: ${props => props.theme.colors.background.default};
+))`
+  ${colorStyles};
   border: none;
   border-radius: 4px;
   padding: ${props => props.theme.spacing * 1.5}rem
@@ -20,8 +42,10 @@ const StyledButton = styled(Button)`
   cursor: pointer;
 `;
 
-StyledButton.propTypes = {
+Button.propTypes = {
   type: PropTypes.oneOf(['button', 'submit', 'reset']).isRequired,
+  default: PropTypes.bool,
+  primary: PropTypes.bool,
   fullWidth: PropTypes.bool,
   children: PropTypes.oneOfType([
     PropTypes.arrayOf(PropTypes.node),
@@ -30,10 +54,12 @@ StyledButton.propTypes = {
   onClick: PropTypes.func
 };
 
-StyledButton.defaultProps = {
+Button.defaultProps = {
   type: 'button',
+  default: true,
+  primary: false,
   fullWidth: false,
   onClick: () => {}
 };
 
-export default StyledButton;
+export default Button;

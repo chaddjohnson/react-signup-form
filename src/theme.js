@@ -4,20 +4,28 @@ const spacing = 0.5;
 
 // Reference: https://cdn.dribbble.com/users/1318796/screenshots/10584866/frame_6.png
 const colors = {
-  primary: '#22FF93',
+  primary: '#2BFEA7',
   secondary: '#E33371',
   text: {
     primary: '#FFFFFF',
-    secondary: 'rgba(255, 255, 255, 0.7)'
+    secondary: '#757A83',
+    tertiary: '#313742'
   },
   background: {
-    default: '#333846',
-    paper: '#121623'
+    default: '#424957',
+    paper: '#171E2E'
   },
   buttons: {
-    active: '#22FF93',
-    hover: '#00552B',
-    selected: '#008846'
+    default: {
+      default: '#3B4451',
+      hover: '#66768C',
+      active: '#505D6F'
+    },
+    primary: {
+      default: '#2BFEA7',
+      hover: '#01C272',
+      active: '#01F590'
+    }
   }
 };
 

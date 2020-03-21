@@ -11,7 +11,7 @@ const StyledInput = styled.input`
   width: 100%;
   padding: ${props => props.theme.spacing * 2}rem;
   color: ${props => props.theme.colors.text.primary};
-  background-color: #252933;
+  background-color: ${props => props.theme.colors.text.tertiary};
   border-radius: 4px;
   border: none;
   outline: none;

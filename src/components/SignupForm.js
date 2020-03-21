@@ -29,7 +29,7 @@ const SignupForm = () => {
         label="Confirm Password"
         placeholder="Confirm your password"
       />
-      <Button type="submit" fullWidth>
+      <Button type="submit" primary fullWidth>
         Sign Up
       </Button>
     </Form>

@@ -7,7 +7,7 @@ const StyledHeader = styled.header`
   margin-bottom: ${props => props.theme.spacing * 2.5}rem;
 `;
 
-const Card = ({ className, title, children }) => (
+const Card = styled(({ className, title, children }) => (
   <div className={className}>
     {title && (
       <StyledHeader>
@@ -16,17 +16,15 @@ const Card = ({ className, title, children }) => (
     )}
     {children}
   </div>
-);
-
-const StyledCard = styled(Card)`
+))`
   background-color: ${props => props.theme.colors.background.paper};
   padding: ${props => props.theme.spacing * 2}rem;
   border-radius: 4px;
-  box-shadow: 0 20px 50px #121623;
+  box-shadow: 0 20px 50px ${props => props.theme.colors.background.paper};
 `;
 
-StyledCard.propTypes = {
+Card.propTypes = {
   title: PropTypes.node
 };
 
-export default StyledCard;
+export default Card;
