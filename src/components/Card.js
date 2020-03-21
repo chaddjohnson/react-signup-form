@@ -3,7 +3,9 @@ import PropTypes from 'prop-types';
 import styled from '@emotion/styled';
 
 const StyledHeader = styled.header`
-  margin: ${props => props.theme.spacing * 1.5}rem;
+  margin-left: ${props => props.theme.spacing * 1.5}rem;
+  margin-right: ${props => props.theme.spacing * 1.5}rem;
+  margin-top: ${props => props.theme.spacing * 0.5}rem;
   margin-bottom: ${props => props.theme.spacing * 2.5}rem;
 `;
 
