@@ -2,29 +2,26 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import styled from '@emotion/styled';
 
-const FormLayoutItem = styled.div`
-  margin: ${props => props.theme.spacing * 2}rem;
+const StyledItem = styled.div`
+  margin: ${props => props.theme.spacing * 2}rem
+    ${props => props.theme.spacing * 1.5}rem;
 `;
 
 const FormLayout = ({ children }) => {
   return (
     <>
       {children.map((child, index) => (
-        <FormLayoutItem key={index}>{child}</FormLayoutItem>
+        <StyledItem key={index}>{child}</StyledItem>
       ))}
     </>
   );
 };
 
-const StyledFormLayout = styled(FormLayout)`
-  margin: ${props => props.theme.spacing}rem;
-`;
-
-StyledFormLayout.propTypes = {
+FormLayout.propTypes = {
   children: PropTypes.oneOfType([
     PropTypes.arrayOf(PropTypes.element),
     PropTypes.node
   ]).isRequired
 };
 
-export default StyledFormLayout;
+export default FormLayout;

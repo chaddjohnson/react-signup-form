@@ -2,15 +2,15 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import styled from '@emotion/styled';
 
-const Label = styled.label`
+const StyledLabel = styled.label`
   display: block;
-  margin-bottom: ${props => props.theme.spacing / 2}rem;
+  margin-bottom: ${props => props.theme.spacing}rem;
 `;
 
-const Input = styled.input`
+const StyledInput = styled.input`
   width: 100%;
   padding: ${props => props.theme.spacing * 2}rem;
-  color: ${props => props.theme.colors.text.secondary};
+  color: ${props => props.theme.colors.text.primary};
   background-color: #252933;
   border-radius: 4px;
   border: none;
@@ -20,8 +20,8 @@ const Input = styled.input`
 
 const TextField = ({ id, type, label, placeholder, autoFocus }) => (
   <div>
-    <Label htmlFor={id}>{label}</Label>
-    <Input
+    <StyledLabel htmlFor={id}>{label}</StyledLabel>
+    <StyledInput
       id={id}
       type={type}
       placeholder={placeholder}

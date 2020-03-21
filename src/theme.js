@@ -22,8 +22,14 @@ const colors = {
 };
 
 const font = {
-  family: 'Source Sans Pro',
-  size: 1.05
+  family: 'Muli',
+  size: 1.05,
+  weights: {
+    light: 300,
+    normal: 400,
+    medium: 500,
+    bold: 700
+  }
 };
 
 // Based on Bootstrap 4.
@@ -49,7 +55,7 @@ const breakpoint = Object.keys(breakpoints).reduce(
 );
 
 export const globalStyles = `
-  @import url('https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,500,700');
+  @import url('https://fonts.googleapis.com/css?family=Muli:300,400,500,700');
 
   * {
     box-sizing: border-box;
@@ -72,6 +78,10 @@ export const globalStyles = `
 
   a:hover, a:active {
     text-decoration: underline;
+  }
+
+  h1, h2, h3, h4, h5, h6 {
+    margin: 0;
   }
 `;
 
