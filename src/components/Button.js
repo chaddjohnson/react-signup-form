@@ -2,33 +2,38 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import { css } from '@emotion/core';
 import styled from '@emotion/styled';
+import { lighten, darken } from '../utilities/color';
 
 const colorStyles = props => {
-  let color = '';
+  let textColor = '';
   let rules = {};
 
   if (props.primary) {
-    color = props.theme.colors.background.default;
+    textColor = props.disabled
+      ? lighten(props.theme.colors.background.default, 0.2)
+      : props.theme.colors.background.default;
     rules = props.theme.colors.buttons.primary;
   } else if (props.default) {
-    color = props.theme.colors.text.primary;
+    textColor = props.disabled
+      ? darken(props.theme.colors.text.primary, 0.2)
+      : darken(props.theme.colors.text.primary, 0.1);
     rules = props.theme.colors.buttons.default;
   }
 
   return css`
-    color: ${color};
-    background-color: ${rules.default};
+    color: ${props.disabled ? darken(textColor, 0.2) : textColor};
+    background-color: ${props.disabled ? rules.disabled : rules.default};
     &:hover {
-      background-color: ${rules.hover};
+      background-color: ${props.disabled ? rules.disabled : rules.hover};
     }
     &:active {
-      background-color: ${rules.active};
+      background-color: ${props.disabled ? rules.disabled : rules.active};
     }
   `;
 };
 
-const Button = styled(({ className, children, onClick }) => (
-  <button className={className} onClick={onClick}>
+const Button = styled(({ className, disabled, children, onClick }) => (
+  <button className={className} disabled={disabled} onClick={onClick}>
     {children}
   </button>
 ))`
@@ -39,13 +44,14 @@ const Button = styled(({ className, children, onClick }) => (
     ${props => props.theme.spacing * 1.5}rem;
   font-size: ${props => props.theme.font.size}rem;
   width: ${props => (props.fullWidth ? '100%' : 'auto')};
-  cursor: pointer;
+  cursor: ${props => (props.disabled ? 'default' : 'pointer')};
 `;
 
 Button.propTypes = {
   type: PropTypes.oneOf(['button', 'submit', 'reset']).isRequired,
   default: PropTypes.bool,
   primary: PropTypes.bool,
+  disabled: PropTypes.bool,
   fullWidth: PropTypes.bool,
   children: PropTypes.oneOfType([
     PropTypes.arrayOf(PropTypes.node),
@@ -58,6 +64,7 @@ Button.defaultProps = {
   type: 'button',
   default: true,
   primary: false,
+  disabled: false,
   fullWidth: false,
   onClick: () => {}
 };

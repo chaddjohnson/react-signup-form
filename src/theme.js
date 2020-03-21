@@ -1,4 +1,5 @@
 import { css } from '@emotion/core';
+import { lighten, darken } from './utilities/color';
 
 const spacing = 0.5;
 
@@ -17,14 +18,16 @@ const colors = {
   },
   buttons: {
     default: {
-      default: '#3B4451',
-      hover: '#66768C',
-      active: '#505D6F'
+      default: '#4C5663',
+      hover: lighten('#4C5663', 0.2),
+      active: lighten('#4C5663', 0.1),
+      disabled: lighten('#4C5663', 0.5)
     },
     primary: {
       default: '#2BFEA7',
-      hover: '#01C272',
-      active: '#01F590'
+      hover: darken('#2BFEA7', 0.2),
+      active: darken('#2BFEA7', 0.1),
+      disabled: darken('#2BFEA7', 0.5)
     }
   }
 };
