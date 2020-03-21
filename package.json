@@ -1,7 +1,7 @@
 {
-  "name": "login-assessment",
+  "name": "signup-assessment",
   "version": "1.0.0",
-  "repository": "https://github.com/chaddjohnson/login-assessment",
+  "repository": "https://github.com/chaddjohnson/signup-assessment",
   "author": "Chad Johnson",
   "private": true,
   "dependencies": {
