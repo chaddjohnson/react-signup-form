@@ -6,8 +6,7 @@ const StyledContainer = styled.div`
   width: 30rem;
   height: 100vh;
   margin: auto;
-  position: relative;
-  top: 10rem;
+  padding-top: 10rem;
 `;
 
 const SignupPage = () => (
