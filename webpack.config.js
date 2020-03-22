@@ -37,6 +37,10 @@ module.exports = {
       template: './public/index.html',
       filename: 'index.html'
     }),
+    new HtmlWebpackPlugin({
+      template: './public/404.html',
+      filename: '404.html'
+    }),
     new webpack.ProgressPlugin(),
     new CleanWebpackPlugin(),
     new CompressionWebpackPlugin()
