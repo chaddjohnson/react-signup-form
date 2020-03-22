@@ -61,7 +61,7 @@ export const useField = (config, dependencies = []) => {
       }
     },
     // eslint-disable-next-line react-hooks/exhaustive-deps
-    [state.value, state.touched]
+    [state.value, state.touched, ...dependencies]
   );
 
   return field;
