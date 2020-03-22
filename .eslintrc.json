@@ -8,7 +8,7 @@
     "prettier",
     "eslint:recommended"
   ],
-  "plugins": ["prettier"],
+  "plugins": ["prettier", "react-hooks"],
   "rules": {
     "prettier/prettier": ["warn"],
     "func-names": ["off"],
@@ -39,9 +39,11 @@
     "no-else-return": "off",
     "import/prefer-default-export": "off",
     "jsx-a11y/anchor-is-valid": "off",
-    "import/no-unresolved": ["on"],
+    "import/no-unresolved": "error",
     "react/react-in-jsx-scope": "off",
-    "import/newline-after-import": "warn"
+    "import/newline-after-import": "warn",
+    "react-hooks/rules-of-hooks": "error",
+    "react-hooks/exhaustive-deps": "warn"
   },
   "parser": "babel-eslint",
   "parserOptions": {

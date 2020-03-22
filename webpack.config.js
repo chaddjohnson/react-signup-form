@@ -20,12 +20,15 @@ module.exports = {
         test: /\.js$/,
         include: path.resolve(__dirname, 'src'),
         exclude: /(node_modules|dist)/,
-        use: {
-          loader: 'babel-loader',
-          options: {
-            presets: ['@babel/preset-env', '@babel/preset-react']
-          }
-        }
+        use: [
+          {
+            loader: 'babel-loader',
+            options: {
+              presets: ['@babel/preset-env', '@babel/preset-react']
+            }
+          },
+          'eslint-loader'
+        ]
       }
     ]
   },
