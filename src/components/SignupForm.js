@@ -25,7 +25,16 @@ const SignupForm = () => {
     value: '',
     validates: [
       notEmpty("Password can't be blank"),
-      lengthLessThan(6, 'Password must be at least 6 characters')
+      lengthLessThan(8, 'Password must be at least 8 characters'),
+      value => {
+        // Reference: https://www.thepolyglotdeveloper.com/2015/05/use-regex-to-test-password-strength-in-javascript/
+        const strengthRegex = /^(?=.*[a-z])(?=.*[A-Z])(?=.*[0-9])(?=.*[!@#\$%\^&\*])(?=.{8,})/;
+        const isStrong = value.match(strengthRegex);
+
+        if (!isStrong) {
+          return 'Password must be strong.';
+        }
+      }
     ]
   });
   const passwordConfirmation = useField(
@@ -53,6 +62,7 @@ const SignupForm = () => {
     event.preventDefault();
 
     // Perform HTTP request to create account here.
+    // Also perform validation in the API.
     // ...
   };
 
@@ -73,7 +83,7 @@ const SignupForm = () => {
           id="password"
           type="password"
           label="Password"
-          minLength={6}
+          minLength={8}
           placeholder="Enter a strong password"
           {...fields.password}
         />
