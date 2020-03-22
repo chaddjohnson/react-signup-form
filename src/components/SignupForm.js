@@ -39,8 +39,8 @@ const SignupForm = () => {
   const handleSubmit = event => {
     event.preventDefault();
 
-    // Simulate an HTTP request.
-    // TODO
+    // Perform HTTP request to create account here.
+    // ...
   };
 
   return (
