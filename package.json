@@ -2,6 +2,7 @@
   "name": "signup-assessment",
   "version": "1.0.0",
   "repository": "https://github.com/chaddjohnson/signup-assessment",
+  "homepage": "https://chaddjohnson.github.io/signup-assessment/",
   "author": "Chad Johnson",
   "private": true,
   "dependencies": {
@@ -36,6 +37,7 @@
     "eslint-plugin-prettier": "^3.1.2",
     "eslint-plugin-react": "^7.19.0",
     "eslint-plugin-react-hooks": "^2.5.1",
+    "gh-pages": "^2.2.0",
     "html-webpack-plugin": "^3.2.0",
     "prettier": "^1.19.1",
     "webpack": "^4.42.0",
@@ -46,6 +48,8 @@
     "build": "NODE_ENV=production webpack -p",
     "format": "find src -type f -iname '*.js' -exec eslint --fix {} +",
     "lint": "eslint 'src/**/*.js'",
-    "start": "webpack-dev-server"
+    "start": "webpack-dev-server",
+    "predeploy": "npm run build",
+    "deploy": "gh-pages -d dist"
   }
 }
