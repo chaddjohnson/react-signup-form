@@ -8,7 +8,15 @@ This is a "Sign Up" form prototype using React demonstrating the following:
 1. State persistence.
 1. Password and password confirmation match validation.
 1. Informing the user when the password and password confirmation do not match.
-1. Styling.
+1. Styling using Emotion.
+
+The following (extra, for fun and for completeness) are also demonstrated:
+
+1. Theming.
+1. Presence validation for username, password, and password confirmation.
+1. Minimum length validation for username and password.
+1. Maximum length enforcement for username.
+1. Password strength.
 
 ## Demo
 
@@ -33,6 +41,6 @@ Run `yarn test` or `npm run test`.
 - Ensure validation for checkbox types are supported.
 - Ensure TextField fully supports all possible HTML input types.
 - Consider adding more helper methods such as `setFieldValue` from Formik to support a wider range of validation scenarios.
-- Investigate how [React Hook Form](https://react-hook-form.com/) and [Formik](https://jaredpalmer.com/formik/) work, and see if anything from those could be incorporated. Namely, analyze their uses of `ref`.
+- Investigate how [React Hook Form](https://react-hook-form.com/) and [Formik](https://jaredpalmer.com/formik/) work, and see if any ideas or developer options from those could be incorporated. Namely, analyze their uses of `ref`.
 - Consider the possibility of making `TextField` an uncontrolled component to reduce re-renders during validation (as React Hook Form does).
 - Set form as `dirty` only when comparison of initial field values to current field values yields a difference.
