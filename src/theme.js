@@ -16,7 +16,7 @@ const colors = {
     default: '#424957',
     paper: '#171E2E'
   },
-  error: '#F60B18',
+  error: '#FA6E76',
   buttons: {
     default: {
       default: '#4C5663',
