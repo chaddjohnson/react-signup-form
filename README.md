@@ -27,6 +27,7 @@ Run `yarn test` or `npm run test`.
 ## Possible improvements
 
 - Provide a way to access a list of all errors present in the form.
+- Explore leveraging `onFocus` with form hooks to provide developer the option to only display errors when fields do not have focus.
 - Allow specification of dependencies for validation functions.
 - Break out form hooks into a separate package.
 - Add `Checkbox` component.
