@@ -16,16 +16,16 @@ const SignupForm = () => {
   const username = useField({
     value: '',
     validates: [
-      notEmpty("Username can't be blank"),
-      lengthLessThan(6, 'Username must be at least 6 characters'),
-      lengthMoreThan(32, 'Username must 32 characters or less')
+      notEmpty("Username can't be blank."),
+      lengthLessThan(6, 'Username must be at least 6 characters.'),
+      lengthMoreThan(32, 'Username must 32 characters or less.')
     ]
   });
   const password = useField({
     value: '',
     validates: [
-      notEmpty("Password can't be blank"),
-      lengthLessThan(8, 'Password must be at least 8 characters'),
+      notEmpty("Password can't be blank."),
+      lengthLessThan(8, 'Password must be at least 8 characters.'),
       value => {
         // Reference: https://www.thepolyglotdeveloper.com/2015/05/use-regex-to-test-password-strength-in-javascript/
         const strengthRegex = /^(?=.*[a-z])(?=.*[A-Z])(?=.*[0-9])(?=.*[!@#\$%\^&\*])/;
@@ -41,10 +41,10 @@ const SignupForm = () => {
     {
       value: '',
       validates: [
-        notEmpty("Password confirmation can't be blank"),
+        notEmpty("Password confirmation can't be blank."),
         value => {
           if (value !== password.value) {
-            return 'Password confirmation must match password';
+            return 'Password confirmation must match password.';
           }
         }
       ]
