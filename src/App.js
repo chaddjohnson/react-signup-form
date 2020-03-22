@@ -2,7 +2,7 @@ import React from 'react';
 import { ThemeProvider } from 'emotion-theming';
 import { Global, css } from '@emotion/core';
 import theme, { globalStyles } from './theme';
-import { Router } from './components';
+import Router from './Router';
 
 const App = () => (
   <>

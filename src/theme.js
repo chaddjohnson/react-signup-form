@@ -16,6 +16,7 @@ const colors = {
     default: '#424957',
     paper: '#171E2E'
   },
+  error: '#F60B18',
   buttons: {
     default: {
       default: '#4C5663',
@@ -35,7 +36,7 @@ const colors = {
 const font = {
   family: 'Muli',
   size: 1.05,
-  weights: {
+  weight: {
     light: 300,
     normal: 400,
     medium: 500,
@@ -80,6 +81,7 @@ export const globalStyles = `
     background: ${colors.background.default};
     font-family: ${font.family};
     font-size: ${font.size}rem;
+    font-weight: ${font.weight.light};
   }
 
   a {

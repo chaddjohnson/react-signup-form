@@ -12,22 +12,45 @@ const StyledInput = styled.input`
   padding: ${props => props.theme.spacing * 2}rem;
   color: ${props => props.theme.colors.text.primary};
   background-color: ${props => props.theme.colors.text.tertiary};
+  border-color: ${props =>
+    props.error ? props.theme.colors.error : props.theme.colors.text.tertiary};
+  border-width: 1px;
+  border-style: solid;
   border-radius: 4px;
-  border: none;
   outline: none;
   font-size: ${props => props.theme.font.size}rem;
 `;
 
-const TextField = ({ id, type, label, placeholder, autoFocus }) => (
-  <div>
+const StyledError = styled.div`
+  color: ${props => props.theme.colors.error};
+  margin-top: ${props => props.theme.spacing}rem;
+`;
+
+const TextField = ({
+  id,
+  type,
+  label,
+  placeholder,
+  error,
+  autoFocus,
+  value,
+  onChange,
+  onBlur
+}) => (
+  <>
     <StyledLabel htmlFor={id}>{label}</StyledLabel>
     <StyledInput
       id={id}
       type={type}
       placeholder={placeholder}
       autoFocus={autoFocus}
+      value={value}
+      error={error}
+      onChange={onChange}
+      onBlur={onBlur}
     />
-  </div>
+    {error && <StyledError>{error}</StyledError>}
+  </>
 );
 
 TextField.propTypes = {
@@ -35,12 +58,18 @@ TextField.propTypes = {
   type: PropTypes.oneOf(['text', 'password']),
   label: PropTypes.node,
   placeholder: PropTypes.string,
-  autoFocus: PropTypes.bool
+  error: PropTypes.node,
+  autoFocus: PropTypes.bool,
+  value: PropTypes.string,
+  onChange: PropTypes.func,
+  onBlur: PropTypes.func
 };
 
 TextField.defaultProps = {
   type: 'text',
-  autoFocus: false
+  autoFocus: false,
+  onChange: () => {},
+  onBlur: () => {}
 };
 
 export default TextField;

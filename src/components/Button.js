@@ -43,6 +43,7 @@ const Button = styled(({ className, disabled, children, onClick }) => (
   padding: ${props => props.theme.spacing * 1.5}rem
     ${props => props.theme.spacing * 1.5}rem;
   font-size: ${props => props.theme.font.size}rem;
+  font-weight: ${props => props.theme.font.weight.normal};
   width: ${props => (props.fullWidth ? '100%' : 'auto')};
   cursor: ${props => (props.disabled ? 'default' : 'pointer')};
 `;
