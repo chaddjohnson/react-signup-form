@@ -10,8 +10,11 @@ export const useField = config => {
     error: undefined
   });
 
+  // Runs field validators, and sets field error to first error.
   const validate = useCallback(() => {
-    const errors = validators.map(validator => validator(state.value));
+    const errors = validators
+      .map(validator => validator(state.value))
+      .filter(error => !!error);
     const firstError = errors[0];
 
     setState(prevState => ({
@@ -49,10 +52,12 @@ export const useField = config => {
   // Run validation on value change.
   useEffect(
     () => {
-      validate();
+      if (state.touched) {
+        validate();
+      }
     },
     // eslint-disable-next-line react-hooks/exhaustive-deps
-    [state.value]
+    [state.value, state.touched]
   );
 
   return field;

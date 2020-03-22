@@ -7,7 +7,7 @@ export const useForm = fields => {
   useEffect(() => {
     const fieldsData = Object.values(fields);
     const hasDirtyFields = fieldsData.some(field => field.dirty);
-    const hasErrors = fieldsData.some(field => field.error);
+    const hasErrors = fieldsData.some(field => !!field.error);
 
     setDirty(hasDirtyFields);
     setValid(!hasErrors);
