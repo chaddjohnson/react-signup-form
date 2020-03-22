@@ -1,5 +1,6 @@
 {
   "name": "signup-assessment",
+  "description": "Sign Up form prototype.",
   "version": "1.0.0",
   "repository": "https://github.com/chaddjohnson/signup-assessment",
   "homepage": "https://chaddjohnson.github.io/signup-assessment/",
