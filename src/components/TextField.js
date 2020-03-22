@@ -33,6 +33,8 @@ const TextField = ({
   placeholder,
   error,
   autoFocus,
+  minLength,
+  maxLength,
   value,
   onChange,
   onBlur
@@ -44,6 +46,8 @@ const TextField = ({
       type={type}
       placeholder={placeholder}
       autoFocus={autoFocus}
+      minLength={minLength}
+      maxLength={maxLength}
       value={value}
       error={error}
       onChange={onChange}
@@ -60,6 +64,8 @@ TextField.propTypes = {
   placeholder: PropTypes.string,
   error: PropTypes.node,
   autoFocus: PropTypes.bool,
+  minLength: PropTypes.number,
+  maxLength: PropTypes.number,
   value: PropTypes.string,
   onChange: PropTypes.func,
   onBlur: PropTypes.func

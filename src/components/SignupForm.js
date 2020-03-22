@@ -4,16 +4,29 @@ import FormLayout from './FormLayout';
 import FormActions from './FormActions';
 import Button from './Button';
 import TextField from './TextField';
-import { useField, useForm, notEmpty } from '../hooks/form';
+import {
+  useField,
+  useForm,
+  notEmpty,
+  lengthMoreThan,
+  lengthLessThan
+} from '../hooks/form';
 
 const SignupForm = () => {
   const username = useField({
     value: '',
-    validates: [notEmpty("Username can't be blank")]
+    validates: [
+      notEmpty("Username can't be blank"),
+      lengthLessThan(6, 'Username must be at least 6 characters'),
+      lengthMoreThan(32, 'Username must 32 characters or less')
+    ]
   });
   const password = useField({
     value: '',
-    validates: [notEmpty("Password can't be blank")]
+    validates: [
+      notEmpty("Password can't be blank"),
+      lengthLessThan(6, 'Password must be at least 6 characters')
+    ]
   });
   const passwordConfirmation = useField(
     {
@@ -22,7 +35,7 @@ const SignupForm = () => {
         notEmpty("Password confirmation can't be blank"),
         value => {
           if (value !== password.value) {
-            return 'Password and confirmation must match';
+            return 'Password confirmation must match password';
           }
         }
       ]
@@ -52,12 +65,15 @@ const SignupForm = () => {
           label="Username"
           placeholder="Choose a username"
           autoFocus={true}
+          minLength={6}
+          maxLength={32}
           {...fields.username}
         />
         <TextField
           id="password"
           type="password"
           label="Password"
+          minLength={6}
           placeholder="Enter a strong password"
           {...fields.password}
         />
