@@ -28,11 +28,11 @@ const SignupForm = () => {
       lengthLessThan(8, 'Password must be at least 8 characters'),
       value => {
         // Reference: https://www.thepolyglotdeveloper.com/2015/05/use-regex-to-test-password-strength-in-javascript/
-        const strengthRegex = /^(?=.*[a-z])(?=.*[A-Z])(?=.*[0-9])(?=.*[!@#\$%\^&\*])(?=.{8,})/;
+        const strengthRegex = /^(?=.*[a-z])(?=.*[A-Z])(?=.*[0-9])(?=.*[!@#\$%\^&\*])/;
         const isStrong = value.match(strengthRegex);
 
         if (!isStrong) {
-          return 'Password must be strong.';
+          return 'Password must contain at least one of each character: lowercase, uppercase, number, special.';
         }
       }
     ]
