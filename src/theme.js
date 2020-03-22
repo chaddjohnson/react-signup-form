@@ -58,7 +58,7 @@ const breakpoint = Object.keys(breakpoints).reduce(
   (map, label) => ({
     ...map,
     [label]: (...args) => css`
-      @media screen and (min-width: ${breakpoints[label]}) {
+      @media screen and (min-device-width: ${breakpoints[label]}) {
         ${css(...args)};
       }
     `
@@ -77,11 +77,14 @@ export const globalStyles = `
     margin: 0;
     padding: 0;
     min-height: 100vh;
+  }
+
+  body {
     color: ${colors.text.primary};
     background: ${colors.background.default};
     font-family: ${font.family};
-    font-size: ${font.size}rem;
     font-weight: ${font.weight.light};
+    font-size: ${font.size}rem;
   }
 
   a {
