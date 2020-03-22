@@ -21,7 +21,7 @@ The following (extra, for fun and for completeness) are also demonstrated:
 
 ## Demo
 
-URL
+https://chaddjohnson.github.io/signup-assessment/
 
 ## Running locally
 
