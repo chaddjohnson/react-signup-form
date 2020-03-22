@@ -4,25 +4,36 @@ import FormLayout from './FormLayout';
 import FormActions from './FormActions';
 import Button from './Button';
 import TextField from './TextField';
-import { useField, useForm, notEmpty, matches } from '../hooks/form';
+import { useField, useForm, notEmpty } from '../hooks/form';
 
 const SignupForm = () => {
-  const { fields, dirty, valid } = useForm({
-    username: useField({
-      value: '',
-      validates: [notEmpty("Username can't be blank")]
-    }),
-    password: useField({
-      value: '',
-      validates: [notEmpty("Password can't be blank")]
-    }),
-    passwordConfirmation: useField({
+  const username = useField({
+    value: '',
+    validates: [notEmpty("Username can't be blank")]
+  });
+  const password = useField({
+    value: '',
+    validates: [notEmpty("Password can't be blank")]
+  });
+  const passwordConfirmation = useField(
+    {
       value: '',
       validates: [
         notEmpty("Password confirmation can't be blank"),
-        matches('Password and confirmation must match')
+        value => {
+          if (value !== password.value) {
+            return 'Password and confirmation must match';
+          }
+        }
       ]
-    })
+    },
+    [password.value]
+  );
+
+  const { fields, dirty, valid } = useForm({
+    username,
+    password,
+    passwordConfirmation
   });
 
   const handleSubmit = event => {

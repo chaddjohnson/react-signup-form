@@ -5,7 +5,3 @@ export const isEmpty = value => {
 export const notEmpty = value => {
   return !isEmpty(value);
 };
-
-export const matches = (valueA, valueB) => {
-  return valueA === valueB;
-};

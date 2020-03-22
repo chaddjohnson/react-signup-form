@@ -1,6 +1,6 @@
 import { useState, useCallback, useMemo, useEffect } from 'react';
 
-export const useField = config => {
+export const useField = (config, dependencies = []) => {
   const validators = config.validates;
 
   const [state, setState] = useState({
@@ -11,17 +11,21 @@ export const useField = config => {
   });
 
   // Runs field validators, and sets field error to first error.
-  const validate = useCallback(() => {
-    const errors = validators
-      .map(validator => validator(state.value))
-      .filter(error => !!error);
-    const firstError = errors[0];
+  const validate = useCallback(
+    () => {
+      const errors = validators
+        .map(validator => validator(state.value))
+        .filter(error => !!error);
+      const firstError = errors[0];
 
-    setState(prevState => ({
-      ...prevState,
-      error: firstError
-    }));
-  }, [validators, state.value]);
+      setState(prevState => ({
+        ...prevState,
+        error: firstError
+      }));
+    },
+    // eslint-disable-next-line react-hooks/exhaustive-deps
+    [validators, state.value, ...dependencies]
+  );
 
   // Update state on change.
   const onChange = useCallback(event => {
