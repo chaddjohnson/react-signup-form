@@ -27,6 +27,7 @@ const StyledError = styled.div`
 
 const TextField = ({
   id,
+  name,
   type,
   label,
   placeholder,
@@ -42,6 +43,7 @@ const TextField = ({
     <StyledLabel htmlFor={id}>{label}</StyledLabel>
     <StyledInput
       id={id}
+      name={name}
       type={type}
       placeholder={placeholder}
       autoFocus={autoFocus}
@@ -58,6 +60,7 @@ const TextField = ({
 
 TextField.propTypes = {
   id: PropTypes.string,
+  name: PropTypes.string,
   type: PropTypes.oneOf(['text', 'password']),
   label: PropTypes.node,
   placeholder: PropTypes.string,
