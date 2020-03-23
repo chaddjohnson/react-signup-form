@@ -6,6 +6,9 @@ jobs:
       - image: circleci/node:12.14.1
     working_directory: ~/repo
     steps:
+      - add_ssh_keys:
+          fingerprints:
+            - 'b1:72:d8:97:ae:f3:74:55:9d:5b:30:bf:e1:62:75:d2'
       - checkout
       - restore_cache:
           keys:
