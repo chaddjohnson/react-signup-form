@@ -28,7 +28,7 @@ exports[`SignupPage should render 1`] = `
         </label>
         <input
           autoFocus={true}
-          className="css-8srlim"
+          className="css-3w2per"
           id="username"
           maxLength={32}
           minLength={6}
@@ -50,7 +50,7 @@ exports[`SignupPage should render 1`] = `
         </label>
         <input
           autoFocus={false}
-          className="css-8srlim"
+          className="css-3w2per"
           id="password"
           minLength={8}
           onBlur={[Function]}
@@ -71,7 +71,7 @@ exports[`SignupPage should render 1`] = `
         </label>
         <input
           autoFocus={false}
-          className="css-8srlim"
+          className="css-3w2per"
           id="passwordConfirmation"
           onBlur={[Function]}
           onChange={[Function]}

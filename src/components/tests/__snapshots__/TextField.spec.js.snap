@@ -10,7 +10,7 @@ Array [
   </label>,
   <input
     autoFocus={false}
-    className="css-8srlim"
+    className="css-3w2per"
     id="test"
     maxLength={32}
     minLength={6}
