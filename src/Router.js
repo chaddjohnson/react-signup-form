@@ -4,7 +4,7 @@ import HomePage from './pages/index';
 import SignupPage from './pages/signup';
 
 const Router = () => (
-  <BrowserRouter>
+  <BrowserRouter basename={process.env.BASE_PATH}>
     <Switch>
       <Route exact path="/">
         <HomePage />

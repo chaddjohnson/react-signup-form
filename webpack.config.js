@@ -33,6 +33,12 @@ module.exports = {
     ]
   },
   plugins: [
+    // new webpack.EnvironmentPlugin(['NODE_ENV']),
+    new webpack.DefinePlugin({
+      'process.env.BASE_PATH': JSON.stringify(
+        process.env.NODE_ENV === 'production' ? '/signup-assessment' : ''
+      )
+    }),
     new HtmlWebpackPlugin({
       template: './public/index.html',
       filename: 'index.html'

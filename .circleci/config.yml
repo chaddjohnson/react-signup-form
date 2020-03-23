@@ -1,0 +1,39 @@
+version: 2.1
+
+jobs:
+  publish:
+    docker:
+      - image: circleci/node:12.14.1
+    working_directory: ~/repo
+    steps:
+      - checkout
+      - restore_cache:
+          keys:
+            - dependencies-cache-{{ .Branch }}-{{ checksum "package.json" }}
+            - dependencies-cache
+      - run:
+          name: Install dependencies
+          command: yarn install
+      - save_cache:
+          key: dependencies-cache-{{ .Branch }}-{{ checksum "package.json" }}
+          paths:
+            - ./node_modules
+      - run:
+          name: Run lint
+          command: yarn lint
+      - run:
+          name: Run tests
+          command: yarn test
+      - run:
+          name: Publish
+          command: yarn deploy
+
+workflows:
+  version: 2
+  publish:
+    jobs:
+      - publish:
+          filters:
+            branches:
+              only:
+                - master
