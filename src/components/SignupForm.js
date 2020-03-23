@@ -18,7 +18,15 @@ const SignupForm = () => {
     validates: [
       notEmpty("Username can't be blank."),
       lengthLessThan(6, 'Username must be at least 6 characters.'),
-      lengthMoreThan(32, 'Username must 32 characters or less.')
+      lengthMoreThan(32, 'Username must 32 characters or less.'),
+      value => {
+        const formatRegex = /^[a-zA-Z0-9_]+$/;
+        const matchesFormat = value.match(formatRegex);
+
+        if (!matchesFormat) {
+          return 'Username may only contain alphanumeric characters and underscores.';
+        }
+      }
     ]
   });
   const password = useField({

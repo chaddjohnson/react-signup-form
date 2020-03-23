@@ -14,6 +14,7 @@ The following (extra, for fun and for completeness) are also demonstrated:
 
 1. Theming.
 1. Presence validation for username, password, and password confirmation.
+1. Username format validation.
 1. Minimum length validation for username and password.
 1. Maximum length enforcement for username.
 1. Password strength validation.
