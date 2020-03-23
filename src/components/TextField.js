@@ -17,7 +17,6 @@ const StyledInput = styled.input`
   border-width: 1px;
   border-style: solid;
   border-radius: 4px;
-  outline: none;
   font-size: ${props => props.theme.font.size}rem;
 `;
 
