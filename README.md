@@ -33,6 +33,10 @@ https://chaddjohnson.github.io/signup-assessment/
 
 Run `yarn test` or `npm run test`.
 
+## Deployment
+
+Push to `master`, and the app will be deployed to GitHub Pages via CI.
+
 ## Possible improvements
 
 - Provide a way to access a list of all errors present in the form.
