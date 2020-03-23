@@ -1,7 +1,7 @@
 import React from 'react';
 import renderer from 'react-test-renderer';
-import Button from './Button';
-import withThemeProvider from '../utilities/withThemeProvider';
+import Button from '../Button';
+import withThemeProvider from '../../utilities/withThemeProvider';
 
 const ThemedButton = withThemeProvider(Button);
 

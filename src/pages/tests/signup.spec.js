@@ -1,7 +1,7 @@
 import React from 'react';
 import renderer from 'react-test-renderer';
-import SignupPage from './signup';
-import withThemeProvider from '../utilities/withThemeProvider';
+import SignupPage from '../signup';
+import withThemeProvider from '../../utilities/withThemeProvider';
 
 const ThemedSignupPage = withThemeProvider(SignupPage);
 

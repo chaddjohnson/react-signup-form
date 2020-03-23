@@ -1,7 +1,7 @@
 import React from 'react';
 import renderer from 'react-test-renderer';
-import Form from './Form';
-import withThemeProvider from '../utilities/withThemeProvider';
+import Form from '../Form';
+import withThemeProvider from '../../utilities/withThemeProvider';
 
 const ThemedForm = withThemeProvider(Form);
 

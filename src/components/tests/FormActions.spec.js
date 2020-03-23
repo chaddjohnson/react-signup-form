@@ -1,7 +1,7 @@
 import React from 'react';
 import renderer from 'react-test-renderer';
-import FormActions from './FormActions';
-import withThemeProvider from '../utilities/withThemeProvider';
+import FormActions from '../FormActions';
+import withThemeProvider from '../../utilities/withThemeProvider';
 
 const ThemedFormActions = withThemeProvider(FormActions);
 

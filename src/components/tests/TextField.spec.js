@@ -1,7 +1,7 @@
 import React from 'react';
 import renderer from 'react-test-renderer';
-import TextField from './TextField';
-import withThemeProvider from '../utilities/withThemeProvider';
+import TextField from '../TextField';
+import withThemeProvider from '../../utilities/withThemeProvider';
 
 const ThemedTextField = withThemeProvider(TextField);
 

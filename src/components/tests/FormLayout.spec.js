@@ -1,7 +1,7 @@
 import React from 'react';
 import renderer from 'react-test-renderer';
-import FormLayout from './FormLayout';
-import withThemeProvider from '../utilities/withThemeProvider';
+import FormLayout from '../FormLayout';
+import withThemeProvider from '../../utilities/withThemeProvider';
 
 const ThemedFormLayout = withThemeProvider(FormLayout);
 
