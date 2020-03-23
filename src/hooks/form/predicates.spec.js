@@ -1,33 +1,43 @@
 import * as predicates from './predicates';
 
-test('isEmpty returns true for an empty string', () => {
-  expect(predicates.isEmpty('')).toBe(true);
-});
+describe('predicates', () => {
+  test('isEmpty should return true for an empty string', () => {
+    const result = predicates.isEmpty('');
+    expect(result).toBe(true);
+  });
 
-test('isEmpty returns false for a non-empty string', () => {
-  expect(predicates.isEmpty('test string')).toBe(false);
-});
+  test('isEmpty should return false for a non-empty string', () => {
+    const result = predicates.isEmpty('test string');
+    expect(result).toBe(false);
+  });
 
-test('notEmpty returns false for a non-empty string', () => {
-  expect(predicates.notEmpty('test string')).toBe(false);
-});
+  test('notEmpty should return false for a non-empty string', () => {
+    const result = predicates.notEmpty('test string');
+    expect(result).toBe(false);
+  });
 
-test('notEmpty returns true for an empty string', () => {
-  expect(predicates.notEmpty('')).toBe(true);
-});
+  test('notEmpty should return true for an empty string', () => {
+    const result = predicates.notEmpty('');
+    expect(result).toBe(true);
+  });
 
-test('lengthMoreThan returns true for a string having a length greater than a specified length', () => {
-  expect(predicates.lengthMoreThan(5)('test string')).toBe(true);
-});
+  test('lengthMoreThan should return true for a string having a length greater than a specified length', () => {
+    const result = predicates.lengthMoreThan(5)('test string');
+    expect(result).toBe(true);
+  });
 
-test('lengthMoreThan returns false for a string having a length less than a specified length', () => {
-  expect(predicates.lengthMoreThan(20)('test string')).toBe(false);
-});
+  test('lengthMoreThan should return false for a string having a length less than a specified length', () => {
+    const result = predicates.lengthMoreThan(20)('test string');
+    expect(result).toBe(false);
+  });
 
-test('lengthLessThan returns true for a string having a length less than a specified length', () => {
-  expect(predicates.lengthLessThan(20)('test string')).toBe(true);
-});
+  test('lengthLessThan should return true for a string having a length less than a specified length', () => {
+    const result = predicates.lengthLessThan(20)('test string');
+    expect(result).toBe(true);
+  });
 
-test('lengthLessThan returns false for a string having a length greater than a specified length', () => {
-  expect(predicates.lengthLessThan(5)('test string')).toBe(false);
+  test('lengthLessThan should return false for a string having a length greater than a specified length', () => {
+    const result = predicates.lengthLessThan(5)('test string');
+    expect(result).toBe(false);
+  });
 });

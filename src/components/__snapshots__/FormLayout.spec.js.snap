@@ -1,0 +1,27 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`FormLayout should render 1`] = `
+Array [
+  <div
+    className="css-12lkxey"
+  >
+    <div>
+      one
+    </div>
+  </div>,
+  <div
+    className="css-12lkxey"
+  >
+    <div>
+      two
+    </div>
+  </div>,
+  <div
+    className="css-12lkxey"
+  >
+    <div>
+      three
+    </div>
+  </div>,
+]
+`;

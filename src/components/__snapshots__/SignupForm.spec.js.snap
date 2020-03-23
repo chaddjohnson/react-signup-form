@@ -1,0 +1,97 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`SignupForm should render 1`] = `
+<div
+  className="css-1fbbzml"
+>
+  <header
+    className="css-c9spwi"
+  >
+    <h2>
+      Sign Up
+    </h2>
+  </header>
+  <form
+    onSubmit={[Function]}
+  >
+    <div
+      className="css-12lkxey"
+    >
+      <label
+        className="css-4rywna"
+        htmlFor="username"
+      >
+        Username
+      </label>
+      <input
+        autoFocus={true}
+        className="css-8srlim"
+        id="username"
+        maxLength={32}
+        minLength={6}
+        onBlur={[Function]}
+        onChange={[Function]}
+        placeholder="Choose a username"
+        type="text"
+        value=""
+      />
+    </div>
+    <div
+      className="css-12lkxey"
+    >
+      <label
+        className="css-4rywna"
+        htmlFor="password"
+      >
+        Password
+      </label>
+      <input
+        autoFocus={false}
+        className="css-8srlim"
+        id="password"
+        minLength={8}
+        onBlur={[Function]}
+        onChange={[Function]}
+        placeholder="Enter a strong password"
+        type="password"
+        value=""
+      />
+    </div>
+    <div
+      className="css-12lkxey"
+    >
+      <label
+        className="css-4rywna"
+        htmlFor="passwordConfirmation"
+      >
+        Confirm Password
+      </label>
+      <input
+        autoFocus={false}
+        className="css-8srlim"
+        id="passwordConfirmation"
+        onBlur={[Function]}
+        onChange={[Function]}
+        placeholder="Confirm your password"
+        type="password"
+        value=""
+      />
+    </div>
+    <div
+      className="css-12lkxey"
+    >
+      <footer
+        className="css-1tclyyl"
+      >
+        <button
+          className="css-1xtj9u"
+          disabled={true}
+          onClick={[Function]}
+        >
+          Sign Up
+        </button>
+      </footer>
+    </div>
+  </form>
+</div>
+`;

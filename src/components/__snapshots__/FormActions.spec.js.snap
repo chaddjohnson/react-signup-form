@@ -1,0 +1,9 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`FormActions should render 1`] = `
+<footer
+  className="css-1tclyyl"
+>
+  Test
+</footer>
+`;

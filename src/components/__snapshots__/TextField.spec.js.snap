@@ -1,0 +1,23 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`TextField should render 1`] = `
+Array [
+  <label
+    className="css-4rywna"
+    htmlFor="test"
+  >
+    Ttest
+  </label>,
+  <input
+    autoFocus={false}
+    className="css-8srlim"
+    id="test"
+    maxLength={32}
+    minLength={6}
+    onBlur={[Function]}
+    onChange={[Function]}
+    placeholder="This is a test"
+    type="text"
+  />,
+]
+`;

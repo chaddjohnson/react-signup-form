@@ -1,0 +1,16 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Card should render 1`] = `
+<div
+  className="css-1fbbzml"
+>
+  <header
+    className="css-c9spwi"
+  >
+    <h2>
+      Test
+    </h2>
+  </header>
+  Test
+</div>
+`;
