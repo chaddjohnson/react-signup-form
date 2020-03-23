@@ -1,6 +1,6 @@
 import React from 'react';
 import { shallow } from 'enzyme';
-import { useField } from '../';
+import { useField } from '..';
 
 describe('useField hook', () => {
   const TestField = ({ config }) => {
