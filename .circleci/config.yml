@@ -26,7 +26,10 @@ jobs:
           command: yarn test
       - run:
           name: Publish
-          command: yarn deploy
+          command: |
+            git config --global user.email "chad.d.johnson@gmail.com"
+            git config --global user.name "Chad Johnson"
+            yarn deploy
 
 workflows:
   version: 2
