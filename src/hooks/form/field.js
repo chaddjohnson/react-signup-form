@@ -1,7 +1,7 @@
 import { useState, useCallback, useMemo, useEffect } from 'react';
 
 export const useField = (config, dependencies = []) => {
-  const validators = config.validates;
+  const validators = config.validates || [];
 
   const [state, setState] = useState({
     value: config.value,
