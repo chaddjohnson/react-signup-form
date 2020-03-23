@@ -58,7 +58,7 @@ const breakpoint = Object.keys(breakpoints).reduce(
   (map, label) => ({
     ...map,
     [label]: (...args) => css`
-      @media screen and (min-device-width: ${breakpoints[label]}) {
+      @media screen and (min-width: ${breakpoints[label]}) {
         ${css(...args)};
       }
     `
