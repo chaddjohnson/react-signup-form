@@ -12,7 +12,7 @@ describe('TextField', () => {
         <ThemedTextField
           id="test"
           type="text"
-          label="Ttest"
+          label="Test"
           placeholder="This is a test"
           autoFocus={false}
           minLength={6}
