@@ -1,4 +1,4 @@
-import { lighten, darken } from './color';
+import { lighten, darken } from '../color';
 
 describe('color', () => {
   test('lighten should return the correct color when lightening', () => {

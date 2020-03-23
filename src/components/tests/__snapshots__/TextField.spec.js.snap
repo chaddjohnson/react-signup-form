@@ -6,7 +6,7 @@ Array [
     className="css-4rywna"
     htmlFor="test"
   >
-    Ttest
+    Test
   </label>,
   <input
     autoFocus={false}

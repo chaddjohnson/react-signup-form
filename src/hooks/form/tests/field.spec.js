@@ -45,7 +45,7 @@ describe('useField hook', () => {
       <TestField
         config={{
           value: 'test value',
-          validates: [value => 'invalid']
+          validates: [() => 'invalid']
         }}
       />
     );
