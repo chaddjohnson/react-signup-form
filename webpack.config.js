@@ -45,6 +45,12 @@ module.exports = {
     new CleanWebpackPlugin(),
     new CompressionWebpackPlugin()
   ],
+  resolve: {
+    alias: {
+      react: 'preact/compat',
+      'react-dom': 'preact/compat'
+    }
+  },
   devServer: {
     port: 3000,
     historyApiFallback: true,
