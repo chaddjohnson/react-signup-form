@@ -1,9 +1,9 @@
 import React from 'react';
 import renderer from 'react-test-renderer';
 import FormLayout from './FormLayout';
-import useThemeProvider from '../utilities/useThemeProvider';
+import withThemeProvider from '../utilities/withThemeProvider';
 
-const ThemedFormLayout = useThemeProvider(FormLayout);
+const ThemedFormLayout = withThemeProvider(FormLayout);
 
 describe('FormLayout', () => {
   it('should render', () => {

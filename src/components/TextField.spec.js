@@ -1,9 +1,9 @@
 import React from 'react';
 import renderer from 'react-test-renderer';
 import TextField from './TextField';
-import useThemeProvider from '../utilities/useThemeProvider';
+import withThemeProvider from '../utilities/withThemeProvider';
 
-const ThemedTextField = useThemeProvider(TextField);
+const ThemedTextField = withThemeProvider(TextField);
 
 describe('TextField', () => {
   it('should render', () => {

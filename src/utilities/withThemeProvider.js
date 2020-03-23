@@ -1,11 +1,11 @@
 import React from 'react';
-import theme from '../theme';
 import { ThemeProvider } from 'emotion-theming';
+import theme from '../theme';
 
-const useThemeProvider = Component => props => (
+const withThemeProvider = Component => props => (
   <ThemeProvider theme={theme}>
     <Component {...props} />
   </ThemeProvider>
 );
 
-export default useThemeProvider;
+export default withThemeProvider;

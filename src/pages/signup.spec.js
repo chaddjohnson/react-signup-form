@@ -1,9 +1,9 @@
 import React from 'react';
 import renderer from 'react-test-renderer';
 import SignupPage from './signup';
-import useThemeProvider from '../utilities/useThemeProvider';
+import withThemeProvider from '../utilities/withThemeProvider';
 
-const ThemedSignupPage = useThemeProvider(SignupPage);
+const ThemedSignupPage = withThemeProvider(SignupPage);
 
 describe('SignupPage', () => {
   it('should render', () => {

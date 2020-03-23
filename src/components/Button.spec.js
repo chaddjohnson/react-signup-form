@@ -1,9 +1,9 @@
 import React from 'react';
 import renderer from 'react-test-renderer';
 import Button from './Button';
-import useThemeProvider from '../utilities/useThemeProvider';
+import withThemeProvider from '../utilities/withThemeProvider';
 
-const ThemedButton = useThemeProvider(Button);
+const ThemedButton = withThemeProvider(Button);
 
 describe('Button', () => {
   it('should render', () => {

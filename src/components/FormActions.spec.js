@@ -1,9 +1,9 @@
 import React from 'react';
 import renderer from 'react-test-renderer';
 import FormActions from './FormActions';
-import useThemeProvider from '../utilities/useThemeProvider';
+import withThemeProvider from '../utilities/withThemeProvider';
 
-const ThemedFormActions = useThemeProvider(FormActions);
+const ThemedFormActions = withThemeProvider(FormActions);
 
 describe('FormActions', () => {
   it('should render', () => {

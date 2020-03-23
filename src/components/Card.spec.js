@@ -1,9 +1,9 @@
 import React from 'react';
 import renderer from 'react-test-renderer';
 import Card from './Card';
-import useThemeProvider from '../utilities/useThemeProvider';
+import withThemeProvider from '../utilities/withThemeProvider';
 
-const ThemedCard = useThemeProvider(Card);
+const ThemedCard = withThemeProvider(Card);
 
 describe('Card', () => {
   it('should render', () => {

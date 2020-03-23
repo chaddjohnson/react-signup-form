@@ -1,9 +1,9 @@
 import React from 'react';
 import renderer from 'react-test-renderer';
 import SignupForm from './SignupForm';
-import useThemeProvider from '../utilities/useThemeProvider';
+import withThemeProvider from '../utilities/withThemeProvider';
 
-const ThemedSignupForm = useThemeProvider(SignupForm);
+const ThemedSignupForm = withThemeProvider(SignupForm);
 
 describe('SignupForm', () => {
   it('should render', () => {
