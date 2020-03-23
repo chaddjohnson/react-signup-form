@@ -1,4 +1,4 @@
-import * as predicates from '../predicates';
+import * as predicates from './predicates';
 
 describe('predicates', () => {
   describe('isEmpty', () => {

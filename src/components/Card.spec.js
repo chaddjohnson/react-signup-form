@@ -1,7 +1,7 @@
 import React from 'react';
 import renderer from 'react-test-renderer';
-import Card from '../Card';
-import withThemeProvider from '../../utilities/withThemeProvider';
+import Card from './Card';
+import withThemeProvider from '../utilities/withThemeProvider';
 
 const ThemedCard = withThemeProvider(Card);
 

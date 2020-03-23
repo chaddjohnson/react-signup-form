@@ -1,4 +1,4 @@
-import * as validators from '../validators';
+import * as validators from './validators';
 
 const errorMessage = 'error message';
 
