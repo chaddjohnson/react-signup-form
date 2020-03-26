@@ -3,6 +3,7 @@ import { useState, useEffect } from 'react';
 export const useForm = fields => {
   const [dirty, setDirty] = useState(false);
   const [valid, setValid] = useState(false);
+  const [submitting, setSubmitting] = useState(false);
 
   useEffect(() => {
     const fieldsData = Object.values(fields);
@@ -13,5 +14,5 @@ export const useForm = fields => {
     setValid(!hasErrors);
   }, [fields]);
 
-  return { fields, dirty, valid };
+  return { fields, dirty, valid, submitting, setSubmitting };
 };
