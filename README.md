@@ -1,4 +1,4 @@
-# Signup Form
+# React Signup Form
 
 ## Overview
 
@@ -9,9 +9,6 @@ This is a "Sign Up" form prototype using React demonstrating the following:
 1. Password and password confirmation match validation.
 1. Informing the user when the password and password confirmation do not match.
 1. Styling using Emotion.
-
-The following (extra, for fun and for completeness) are also demonstrated:
-
 1. Theming.
 1. Presence validation for username, password, and password confirmation.
 1. Username format validation.
@@ -22,7 +19,7 @@ The following (extra, for fun and for completeness) are also demonstrated:
 
 ## Demo
 
-https://chaddjohnson.github.io/signup-assessment/
+https://chaddjohnson.github.io/react-signup-form/
 
 ## Running locally
 

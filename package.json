@@ -1,9 +1,9 @@
 {
-  "name": "signup-assessment",
+  "name": "react-signup-form",
   "description": "Sign Up form prototype.",
   "version": "1.0.0",
-  "repository": "https://github.com/chaddjohnson/signup-assessment",
-  "homepage": "https://chaddjohnson.github.io/signup-assessment/",
+  "repository": "https://github.com/chaddjohnson/react-signup-form",
+  "homepage": "https://chaddjohnson.github.io/react-signup-form/",
   "author": "Chad Johnson",
   "private": true,
   "dependencies": {

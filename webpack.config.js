@@ -35,7 +35,7 @@ module.exports = {
   plugins: [
     new webpack.DefinePlugin({
       'process.env.BASE_PATH': JSON.stringify(
-        process.env.NODE_ENV === 'production' ? '/signup-assessment' : ''
+        process.env.NODE_ENV === 'production' ? '/react-signup-form' : ''
       )
     }),
     new HtmlWebpackPlugin({
