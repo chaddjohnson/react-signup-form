@@ -60,26 +60,23 @@ const SignupForm = () => {
     [password.value]
   );
 
-  const { fields, dirty, valid, submitting, setSubmitting } = useForm({
-    username,
-    password,
-    passwordConfirmation
-  });
+  const { fields, dirty, valid, submit, submitting } = useForm(
+    {
+      username,
+      password,
+      passwordConfirmation
+    },
+    async formValues => {
+      console.log(formValues);
 
-  const handleSubmit = async event => {
-    event.preventDefault();
-
-    setSubmitting(true);
-
-    // Perform HTTP request to create account here.
-    // Also perform validation in the API.
-    await new Promise(resolve => setTimeout(resolve, 1000));
-
-    setSubmitting(false);
-  };
+      // Perform HTTP request to create account here.
+      // Also perform validation in the API.
+      await new Promise(resolve => setTimeout(resolve, 1000));
+    }
+  );
 
   return (
-    <Form title="Sign Up" onSubmit={handleSubmit}>
+    <Form title="Sign Up" onSubmit={submit}>
       <FormLayout>
         <TextField
           id="username"
