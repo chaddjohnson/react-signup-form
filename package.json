@@ -1,6 +1,6 @@
 {
   "name": "react-signup-form",
-  "description": "Sign Up form prototype.",
+  "description": "React-based sign up form prototype.",
   "version": "1.0.0",
   "repository": "https://github.com/chaddjohnson/react-signup-form",
   "homepage": "https://chaddjohnson.github.io/react-signup-form/",
