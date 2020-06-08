@@ -7,15 +7,13 @@ const StyledItem = styled.div`
     ${props => props.theme.spacing * 1.5}rem;
 `;
 
-const FormLayout = ({ children }) => {
-  return (
-    <>
-      {children.map((child, index) => (
-        <StyledItem key={index}>{child}</StyledItem>
-      ))}
-    </>
-  );
-};
+const FormLayout = ({ children }) => (
+  <>
+    {children.map((child, index) => (
+      <StyledItem key={index}>{child}</StyledItem>
+    ))}
+  </>
+);
 
 FormLayout.propTypes = {
   children: PropTypes.oneOfType([
